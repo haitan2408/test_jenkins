@@ -46,6 +46,7 @@ public class StudentController {
     public String createStudent(@ModelAttribute("student") Student student,
                                 Model model,
                                 RedirectAttributes redirectAttributes) {
+        System.out.println("Hi");
         iStudentService.save(student);
 //        List<Student> list = iStudentService.getAll();
 //        model.addAttribute("listStudent", list);
