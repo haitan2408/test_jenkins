@@ -43,7 +43,8 @@ public class StudentController {
     }
 
     @PostMapping("/create")
-    public String createStudent(Model model,
+    public String createStudent(@ModelAttribute("student") Student student,
+                                Model model,
                                 RedirectAttributes redirectAttributes) {
         iStudentService.save(student);
 //        List<Student> list = iStudentService.getAll();
